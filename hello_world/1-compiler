@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc -c $CFile
+chmod a+x
