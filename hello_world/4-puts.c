@@ -2,10 +2,11 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
-int main (void)
+int main ()
 {
 	puts("\"Progarmming is like building a multibilingual puzzle");
 	return(0);
+	
 }
