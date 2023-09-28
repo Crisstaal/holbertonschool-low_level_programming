@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- *  * main - entry point
- *   * sizeof - size
- *    * Return: 0
- *     */
+ * main - entry point
+ * sizeof - size
+ * Return: 0
+ */
 
 int main(void)
 {
