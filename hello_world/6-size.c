@@ -1,3 +1,17 @@
-VimCrypt~03!5Pd¶µ¿v¢aÌ&MÇÜ|ÖmöÖ(ÎÄÊ·Á[Í©xm–B,¦!š6yæzão"°ÕÙöÑÕÏËb'O|5MÀ§ûÊVÇ>|Õ‚O;>ıZ¤@‹ê¤{QíÖîÑ”¿d;94í¸ç˜u†Havz¡€ë¿ù+I; œĞÙ"¸ècWÅñóöó‰İÊ´Æ¢yãcxHÉ:Çõù&ı9â¢¶Ê$1Ü!jõÈ÷¡šL³àP=Mù‰}1YŸ_IxÎUy¹oÂ•
-¡çñüöÄå=ó„{—Õ¾v?@2Æa¿âP3sÖréCLË!È]U–¡·xËfZåSó4ºüb-•H.Ù·¼ï¿FÃËİ
-á‘U¡~[‰Š^Ğ|è‡§D\V®;ªÇ}®‡¢n&#ëË×Rt¶S)"Ô˜ßq2£hÑ64Â<“.Ú¤r¼I.tI¡êTX–²]m?z«OÚí<À¥·ÀÕßÓı*êŒ¦¢˜.c…åÃ†$…°œ°òİL•×ìÇÜ{:ÂÜZ`>ò—Ql_~·«™çİ[Á)»3ı]3
+#include <stdio.h>
+
+/**
+ *  * main - entry point
+ *   * sizeof - size
+ *    * Return: 0
+ *     */
+
+int main(void)
+{
+	printf("Size of a char: %zu byte(s)\n", sizeof(char));
+       	printf("Size of an int: %zu byte(s)\n", sizeof(int));
+	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
+	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
+	printf("Size of a float: %zu byte(s)\n", sizeof(float));
+	return (0);
+}
