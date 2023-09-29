@@ -1,14 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Prints all cases of the alphabet
+ * main - Prints all the cases of alphabet.
  *
  * Return: 0
  */
 int main(void)
 {
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int i;
+	
 	for (i = 0; i < 52; i++)
 	{
 		putchar(alp[i]);
