@@ -3,13 +3,14 @@
 /**
  *
  * _puts - prints a string then a nw line
- * @str: string 
+ * @str: string
  */
 
 void _puts(char *str)
 {
 	while (*str != '\0')
 	{
-_putchar(*str++);}
+	_putchar(*str++);
+	}
 	_putchar('\n');
 }
