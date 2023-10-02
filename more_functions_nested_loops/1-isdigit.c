@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * _isdigit - writes the character c to stdout
- *
+ *@c: The character to check
  * Return: 0
  */
 int _isdigit(int c)
