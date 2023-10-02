@@ -2,6 +2,8 @@
 
 /**
  * main - uppercase letters
+ * _isupper - checks if a character is uppercase
+ * @c: The character to check
  *
  * Return: 0
  */
