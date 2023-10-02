@@ -4,7 +4,8 @@
  * rev_string - reverse of string
  * @s: input string
  * Return: String in reverse
- * */
+ *
+ */
 
 void rev_string(char *s)
 {
