@@ -16,22 +16,21 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 != 0)
 		{
-			printf("Fizz ");
+			printf("Fizz\n");
 		}
 		else if (i % 5 == 0 && i % 3 != 0)
 		{
-			printf("Buzz ");
+			printf("Buzz\n");
 		}
 		else if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz\n");
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d\n", i);
 		}
 	}
-	printf("\n");
 
 	return (0);
 }
