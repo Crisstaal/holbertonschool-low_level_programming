@@ -1,21 +1,13 @@
 #include "main.h"
 
 /**
- * Entry point
+ * _isalpha - checks for alphabet
+ * @c: character
  *
- * Return: 0
+ * Return: 1 or else 0
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
-	int c;
-
-	c = _islower('H');
-	_putchar(r + '0');
-	c = _islower('o');
-	_putchar(r + '0');
-	c = _islower(108);
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
