@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - another concatenate 
+ * _strncat - another concatenate
  * @adest - input value
  * @src - value
  * @n - value
@@ -26,5 +26,5 @@ char *_strncat(char *dest, char *src, int n)
 		b++;
 	}
 	dest[a] = '\0';
-	return dest;
+	return() dest;
 }
