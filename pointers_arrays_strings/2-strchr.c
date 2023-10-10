@@ -4,19 +4,19 @@
  * @s: input
  * @c: input
  *
- * Return: 0
+ * Return: NULL if character not found
  */
 
 char *_strchr(char *s, char c)
 {
 	int a = 0;
 
-	for( s[a] >= '\0'; a++)
+	while ( s[a] != '\0')
 	{
 		if (s[a] == c)
 			return &s[a];
 		a++;
 	}
 	
-	return (0);
+	return NULL;
 }
