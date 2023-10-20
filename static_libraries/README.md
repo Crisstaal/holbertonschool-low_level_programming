@@ -1,1 +1,0 @@
-first Static library
