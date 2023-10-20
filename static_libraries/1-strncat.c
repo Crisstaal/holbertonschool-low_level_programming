@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
 
+
 char *_strncat(char *dest, char *src, int n)
 {
     int dest_len = strlen(dest);
