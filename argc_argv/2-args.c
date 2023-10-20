@@ -10,7 +10,7 @@
  * Return: 0
  */
 
-int main(int argc, char *argc[])
+int main(int argc, char *argv[])
 {
 	int count = 0;
 
