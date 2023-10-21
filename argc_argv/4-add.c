@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
 	int result = 0;
 	int i, j;
 
-	for (int i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		char *arg = argv[i];
 
@@ -37,4 +37,3 @@ int main (int argc, char *argv[])
 	printf("%d\n", result);
 	return (0);
 }
-	
