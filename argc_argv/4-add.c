@@ -11,14 +11,14 @@
 
 int main (int argc, char *argv[])
 {
+	int result = 0;
+	int i, j;
+
 	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
-
-	int result = 0;
-	int i, j;
 
 	for (i = 1; i < argc; i++)
 	{
