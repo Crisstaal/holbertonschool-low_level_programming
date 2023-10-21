@@ -18,12 +18,13 @@ int main (int argc, char *argv[])
 	}
 
 	int result = 0;
+	int i, j;
 
 	for (int i = 1; i < argc; i++)
 	{
 		char *arg = argv[i];
 
-		for (int j = 0; arg[j] != '\0'; j++)
+		for (j = 0; arg[j] != '\0'; j++)
 		{
 			if (!isdigit(arg[j]))
 			{
