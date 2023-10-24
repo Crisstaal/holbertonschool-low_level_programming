@@ -5,7 +5,7 @@
  * array_range - array of integers
  * @min: minimum
  * @max: maximum
- * 
+ *
  * Return: allocated memory
  */
 
