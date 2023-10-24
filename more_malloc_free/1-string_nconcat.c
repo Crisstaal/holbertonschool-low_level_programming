@@ -12,7 +12,7 @@
  * Return: new allocated  memory
  */
 
-char *string_noncat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	size_t a, b, c;
 	char *s;
