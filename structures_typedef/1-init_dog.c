@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * innit_dog - intialize variable
+ * init_dog - intialize variable
  *
  * @d: pointer
  * @name: name of dog
@@ -12,10 +12,21 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d = malloc(sizeof(struct dog));
-	if (d == NULL)
+	if (d == NULL){
 		return;
-	d->name = name;
+	}
+
+	d->name = strdup(name);
+	if (d->name == NULL){
+		return;
+	}
+
 	d->age = age;
-	d->owner = owner;
+
+	d->owner = strdup(owner);
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		return;
+	}
 }
