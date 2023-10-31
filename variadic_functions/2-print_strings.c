@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_strings(const unsigned int n, ...)
 {
 	unsigned int i;
 	char *str;
@@ -21,8 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", str);
 		}
-		if ()
 	}
-	print ("\n");
+	printf("\n");
 	va_end(ptr_str);
 }
