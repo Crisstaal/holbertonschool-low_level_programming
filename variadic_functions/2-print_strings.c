@@ -27,3 +27,8 @@ void print_strings(const unsigned int n, ...)
 	printf("\n");
 	va_end(ptr_str);
 }
+
+int main(){
+	print_strings(4, "You", "know", "nothing", "Jon Snow");
+	return 0;
+}
