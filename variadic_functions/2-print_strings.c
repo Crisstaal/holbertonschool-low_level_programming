@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void print_string(const unsigned int n, ...)
+void print_strings(const unsigned int n, ...)
 {
 	unsigned int i;
 	char *str;
