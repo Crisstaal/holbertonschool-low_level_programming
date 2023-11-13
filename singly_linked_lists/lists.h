@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * structlist_s - singly linled list
+ * struct list_s - singly linled list
  * @str: string
  * @len: string length
  * @next: points to the nextnode
