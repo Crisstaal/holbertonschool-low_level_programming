@@ -20,18 +20,20 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-	for (len = 0; b[len] != '\0'; len++)
+
+	for (len = 0; b[len] != '\0'; len++);
 
 	if (len == 1 && (b[0] == '0' || b[0] == '1'));
-			return (b[0] - 48);
+			return (b[0] - '0');
+
 	for (i = 0; b[i] != '\0'; i++)
 	{
 	if (b[i] != '0' && b[i] != '1')
 	return (0);
 
 	for (k = len - 1; k > 0; k--)
-	pow = pow * base;
-	sum = sum + (pow * (b[i] - 48));
+	pow *= base;
+	sum += (pow * (b[i] - '0'));
 	len--;
 	pow = 1;
 	}
