@@ -47,20 +47,35 @@ int main(int argc, char *argv[])
 	}
 	
 	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0664);
-	file_from = open(argv[1], O_RDONLY);
-	open_file(file_to, file_from, argv);
-
-	characters = read(file_from, buff, 1024);
-		if (characters == -1)
-			open_file(-1, 0, argv);
-
-		written = write(file_to, buff, characters);
-		if (written == -1)
-		open_file(0, -1, argv);
-	
-
-	if (close(file_to) == -1)
+	if (file_to == -1)
 	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+
+	while ((characters = read(file_from, buff, sizeof(buff))) > 0) {
+		written = write(file_to, buff, characters);
+		if (written != characters)
+		{
+			dprintf(STDERR_FILENO, "Error: Write incomplete\n");
+			exit(100);
+		}
+	}
+	
+	if (characters == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	
+	if (close(file_to) == -1){
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", file_to);
 	exit(100);
 	}
