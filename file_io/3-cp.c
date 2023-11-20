@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdio.h>
 
 /**
@@ -14,12 +17,12 @@ void open_file(int file_to, int file_from, char *argv[])
 {
 	if (file_to == -1)
 	{
-		printf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	if (file_from == -1)
 	{
-		printf(STDERR_FILEN0, "Error: Can't read from file %s\n", argv[2]);
+		printf(STDERR_FILEN0, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -35,40 +38,38 @@ int main(int argc, char *argv[])
 	ssize_t characters;
 	ssize_t written;
 	char buff[1024];
-	int error;
+	int file_to, file_from;
 	
 	if (argc != 3)
 	{
-		printf(STDERR_FILENO, "Usage: cp file_from file_to %s\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to %s\n");
 		exit(97);
 	}
 	
-	file_to = open(argv[1], O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 664);
-	file_from = open(argv[2], O_RDONLY);
+	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0664);
+	file_from = open(argv[1], O_RDONLY);
 	open_file(file_to, file_from, argv);
 
-	characters = 1024;
-	if (characters == 1024)
-	{
-		characters = read(file_from, buff, 1024);
+	characters = read(file_from, buff, 1024);
 		if (characters == -1)
 			open_file(-1, 0, argv);
-		written = write(file_to, 1024, buff);
+
+		written = write(file_to, buff, characters);
 		if (written == -1)
 		open_file(0, -1, argv);
-	}
+	
 
-	open_file == close(file_to);
+	if (close(file_to) == -1)
 	{
-		printf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", file_to);
 	exit(100);
 	}
 	
-	open_file = close(file_from);
-	if (open_file == -1)
+	if (close(file_from) == -1)
 	{
-	printf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", file_from);
-	exit (100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", file_from);
+	exit(100);
 	}
+
 	return (0);
 }
