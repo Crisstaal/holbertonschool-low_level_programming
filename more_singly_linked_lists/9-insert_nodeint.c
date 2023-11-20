@@ -1,14 +1,15 @@
 #include "lists.h"
 /**
  * creating_node - creates a new node
- * @a: node
+ * @n: node
  * Return: pointer
  */
 
-listint_t *creating_node (int n)
+listint_t *creating_node(int n)
 {
 	listint_t *node;
 	node = malloc(sizeof(listint_t));
+
 	if (node == NULL)
 	return (NULL);
 	node->n = n;
@@ -43,7 +44,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = node;
 		return (node);
 	}
-	
 	if (idx == 0)
 		*head = node;
 	for (a = 0; a < idx - 1 && temp != NULL && idx != 0; a++)
