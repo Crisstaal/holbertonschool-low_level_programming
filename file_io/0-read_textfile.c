@@ -21,18 +21,38 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	filedesc = open(filename, O_RDONLY);
 	
 	if (filedesc == -1)
+	{
 		return (0);
+	}
 
 	str = malloc(sizeof(char) * letters);
 
 	if (str == NULL)
+	{
+		close(filedesc);
 		return (0);
+	}
+
 	numread = read(filedesc, str, letters);
+	
+	if (numread == -1)
+	{
+		close(filedesc);
+		free(str);
+		return (0);
+	}
 
-	written = write(str, numread, STDOUT_FILENO);
+	written = write(STDOUT_FILENO, str, numread);
 
+	if (written == -1)
+	{
+		close(filedesc);
+		free (str);
+		return (0);
+	}
+	
 	close(filedesc);
-	free (str);
+	free(str);
 
 	return (written);
 }
