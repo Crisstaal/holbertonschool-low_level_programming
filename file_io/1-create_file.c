@@ -2,8 +2,8 @@
 /**
  * create_file - creates a file
  * @filename: created file
- * @textcontent: content copied
- * @Return: 1 if successful or -1 if not
+ * @text_content: content copied
+ * Return: 1 if successful or -1 if not
  */
 
 int create_file(const char *filename, char *text_content)
@@ -20,7 +20,8 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content == NULL)
 		text_content = "";
-	for (letters = 0; text_content[letters]; letters++);
+	for (letters = 0; text_content[letters]; letters++)
+		;
 
 	rwr = write(filedesc, text_content, letters);
 
