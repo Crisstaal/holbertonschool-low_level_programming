@@ -6,7 +6,6 @@
  * @letters: letters printed
  * Return: the actual numnber of letters it could read and print
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t numread, written;
@@ -17,14 +16,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-
-	filedesc = open(filename, O_RDONLY);
-	
+	filedesc = open(filename, O_RDONLY);	
 	if (filedesc == -1)
-	{
 		return (0);
-	}
-
 	str = malloc(sizeof(char) * letters);
 
 	if (str == NULL)
@@ -32,27 +26,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(filedesc);
 		return (0);
 	}
-
 	numread = read(filedesc, str, letters);
-	
-	if (numread == -1)
+	if (numread == -1 || written == -1)
 	{
 		close(filedesc);
 		free(str);
 		return (0);
 	}
-
 	written = write(STDOUT_FILENO, str, numread);
-
-	if (written == -1)
-	{
-		close(filedesc);
-		free (str);
-		return (0);
-	}
-	
 	close(filedesc);
 	free(str);
-
 	return (written);
 }
