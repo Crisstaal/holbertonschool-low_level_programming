@@ -6,7 +6,6 @@
 
 /**
  * open_file - if there an open file
- *
  * @argv: argument vector
  * @file_from: intial file
  * @file_to: ending file
@@ -22,7 +21,7 @@ void open_file(int file_to, int file_from, char *argv[])
 	}
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILEN0, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 }
