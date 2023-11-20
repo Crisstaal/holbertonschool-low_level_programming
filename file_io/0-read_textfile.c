@@ -27,13 +27,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	numread = read(filedesc, str, letters);
+	written = write(STDOUT_FILENO, str, numread);
 	if (numread == -1 || written == -1)
 	{
 		close(filedesc);
 		free(str);
 		return (0);
 	}
-	written = write(STDOUT_FILENO, str, numread);
 	close(filedesc);
 	free(str);
 	return (written);
