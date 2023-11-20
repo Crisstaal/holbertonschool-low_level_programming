@@ -2,8 +2,9 @@
 /**
  * get_nodeint_at_index - retrieve a node
  * @head: pointer
- * @index: node
- * @Return: pointer retrieved
+ * @index: index of the node to retrieve
+ *
+ * @Return: pointer to the node if else return NULL
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
