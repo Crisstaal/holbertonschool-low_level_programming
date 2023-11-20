@@ -2,11 +2,11 @@
 #include <stddef.h>
 
 /**
- * binary_to_uint - converts to binary
+ * binary_to_uint - converts to binary number to an unsigned int
  *
- * @b: character
+ * @b: character pointer
  *
- * Return: the new binary number
+ * Return: the converted number or 0
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -24,19 +24,17 @@ unsigned int binary_to_uint(const char *b)
 	for (len = 0; b[len] != '\0'; len++);
 
 	if (len == 1 && (b[0] == '0' || b[0] == '1'));
-			return (b[0] - '0');
+			return (b[0] - 48);
 
 	for (i = 0; b[i] != '\0'; i++)
 	{
-	if (b[i] != '0' && b[i] != '1')
-	return (0);
-
-	for (k = len - 1; k > 0; k--)
-	pow *= base;
-	sum += (pow * (b[i] - '0'));
-	len--;
-	pow = 1;
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
+		for (k = len - 1; k > 0; k--)
+			pow = pow * base;
+		sum = sum + (pow * (b[i] - 48));
+		len--;
+		pow = 1;
 	}
 	return (sum);
 }
-
