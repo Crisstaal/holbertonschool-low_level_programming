@@ -22,9 +22,10 @@ void open_file(int file_to, int file_from, char *argv[])
 	}
 	if (file_from == -1)
 	{
-		printf(STDERR_FILEN0, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILEN0, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+}
 
 /**
  * main - copies file content to another file
@@ -42,7 +43,7 @@ int main(int argc, char *argv[])
 	
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to %s\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to %s\n", argv[0]);
 		exit(97);
 	}
 	
