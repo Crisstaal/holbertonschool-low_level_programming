@@ -1,8 +1,7 @@
 #include "lists.h"
 /**
- * get_nodeint_at_index - retrieve a node
+ * get_nodeint_at_index - gets the nth node of a listint_t list
  * @head: pointer
- * @index: index of the node to retrieve
  *
  * @Return: pointer to the node if else return NULL
  */
