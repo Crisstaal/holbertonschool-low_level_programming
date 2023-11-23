@@ -1,4 +1,6 @@
 #include "hash_tables.h"
+#include <stdio.h>
+
 /**
  * hash_table_print - print the key
  * @ht: pointer
@@ -24,7 +26,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (end)
 				printf(",");
-			printf("%s:%s", b->key, b->value);
+			printf("'%s' : '%s'", b->key, b->value);
 			end = 1;
 			b = b->next;
 		}
