@@ -12,12 +12,11 @@
  * @previous: node
  */
 
-struct dlistint_t
-{
+typedef struct dlistint {
 	int n;
-	struct dlistint_t *prev;
-	struct dlistint_t *next;
-};
+	struct dlistint *prev;
+	struct dlistint *next;
+}dlistint_t;
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
