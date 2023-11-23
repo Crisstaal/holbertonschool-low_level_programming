@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * has_djb2 - compute hash using djb2
+ * hash_djb2 - compute hash using djb2
  * @str: sting
  * Return: value
  */
@@ -14,7 +14,7 @@ unsigned long int hash_djb2(const unsigned char *str)
 
 	while ((i = *str++))
 	{
-		hasht= ((hasht << 5) + hasht) + i;
+		hasht = ((hasht << 5) + hasht) + i;
 	}
 	return (hasht);
 }
