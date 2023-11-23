@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - adds node at the end
+ * add_dnodeint_end - adds node at the end
  * @head: head
  * @n: integer
  * Return: the address of the new element
@@ -27,7 +27,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	}
 	else
 	{
-		while(h->next != NULL)
+		while (h->next != NULL)
 		{
 			h = h->next;
 		}
