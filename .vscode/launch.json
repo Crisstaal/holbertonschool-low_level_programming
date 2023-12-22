@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/muyun/Documents/GitHub/holbertonschool-low_level_programming/static_libraries",
-      "program": "c:/Users/muyun/Documents/GitHub/holbertonschool-low_level_programming/static_libraries/build/Debug/outDebug",
+      "cwd": "c:/Users/muyun/Documents/GitHub/holbertonschool-low_level_programming/search_algorithms",
+      "program": "c:/Users/muyun/Documents/GitHub/holbertonschool-low_level_programming/search_algorithms/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
